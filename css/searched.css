@@ -1,0 +1,90 @@
+.contentsContainer {
+    display: flex;
+}
+
+.contentsContainer > div {
+    margin: 10px;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.searchResult h3 {
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.booksContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bookItem {
+    display:flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 30px;
+    width: 300px;
+    position: relative;
+}
+
+.bookItem img{
+    flex-grow:0;
+    flex-shrink:0;
+}
+
+ul {
+    padding: 10px;
+    text-align: left;
+    margin-left: 5px;
+}
+
+li.title {
+    list-style-type: none;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+li.author {
+    list-style-type: none;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+li.price {
+    list-style-type: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.buttons {
+    position: absolute;
+    margin-left: 0;
+    left: 130px;
+    right: 100px;
+    top: 150px;
+}
+
+button {
+    color: white;
+    padding: 2px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+.buttonCart, .buttonOnline {
+    width: 100px;
+    background-color: white;
+    color: black;
+    border: 2px solid #dd1d5e;
+}
+
+.buttonCart:hover, .buttonOnline:hover {
+    background-color: #dd1d5e;
+    color: white;
+}

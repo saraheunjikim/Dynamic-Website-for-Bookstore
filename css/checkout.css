@@ -1,0 +1,92 @@
+/* Styles only used on the checkout page */
+
+/* Styles used for top section that contains page heading */
+#topSection {
+    max-width: 1400px;
+    padding: 30px 190px 30px 140px;
+}
+
+/* Styles used for bottom section that contains Customer form and Checkout summary */
+#bottomSection {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1400px;
+    padding-left: 70px;
+}
+
+/* Styles used for Customer Input Form */
+#formTitleText {
+    max-width: 465px;
+}
+.errorMessage {
+    color: red;
+    line-height: 5px;
+}
+#checkoutForm {
+    margin: 20px 0 50px 0;
+    background-color: #fff9fc;
+    padding: 30px;
+}
+#checkoutTable td {
+    vertical-align: top;
+    text-align: left;
+    margin: 15px;
+}
+#checkoutTable th {
+    text-align: left;
+    padding: 3px;
+    font-weight: lighter;
+}
+
+.inputField {
+    width: 250px;
+}
+td select {
+    font-size: smaller;
+    height: 23px;
+}
+#selectMonth {
+    width: 115px;
+}
+#submitButton {
+    height: 25px;
+    border-radius: 8px;
+    border: none;
+    margin: 6px 0 0 4px;
+    text-align: center;
+    background-color: #dd1d5e;
+    color: white;
+    font-size: 0.875em;
+    text-decoration: none;
+}
+#submitButton:hover {
+    cursor: pointer;
+}
+
+/* Styles used for Checkout summary */
+ul {
+    list-style-type: square;
+    line-height: 150%;
+}
+#checkoutSummary {
+    margin: 55px 0;
+}
+#checkoutTotals {
+    margin: 20px 0 0 38px;
+    background-color: #fff9fc;
+    padding: 20px 0 20px 30px;
+    border-radius: 4px;
+    width: 275px;
+}
+#checkoutTotals td {
+    text-align: right;
+    padding: 5px;
+
+}
+.checkoutPriceColumn {
+    width: 80px;
+    font-weight: bold;
+}
+.total {
+    border-top: 1px solid black
+}

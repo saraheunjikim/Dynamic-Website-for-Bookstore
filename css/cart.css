@@ -1,0 +1,83 @@
+/* Styles only used on the cart page */
+
+/* Styles for top section that has heading and command buttons */
+h1 {
+    margin-left: 480px;
+}
+#topSection {
+    padding: 20px 200px 0 210px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;\margin-left: 10px;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+.commandButton {
+    height: 30px;
+    width: 150px;
+    border-radius: 8px;
+    margin: 20px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #dd1d5e;
+    font-size: smaller;
+    color: white;
+    text-decoration: none;
+}
+
+/* Styles for middle section, which has the table of cart items  */
+#midSection {
+    padding: 50px 220px 10px 200px;
+    margin-left: 10px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+#midSection h1 {
+    margin-left: 220px;
+}
+table {
+    width: 100%
+}
+tr {
+    height: 50px;
+    border-bottom: 1px solid black;
+}
+.titleColumn, .quantityColumn, .priceColumn {
+    text-align: center;
+}
+.totalColumn {
+    text-align: right;
+}
+#quantityInput {
+    width: 30px;
+    text-align: right;
+}
+#updateButton {
+    height: 18px;
+    border-radius: 8px;
+    border: none;
+    margin: 6px 0 0 4px;
+    text-align: center;
+    background-color: #dd1d5e;
+    color: white;
+    font-size: 0.875em;
+    text-decoration: none;
+}
+#updateButton:hover {
+    cursor: pointer;
+}
+.errorMessage {
+    color: red;
+}
+
+/* Styles for bottom section that has cart totals */
+#bottomSection {
+    padding: 50px 220px 50px 210px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}

@@ -1,0 +1,25 @@
+/* Styles only used on the confirmation page */
+
+main {
+    margin-top: 100px;
+    width: 1160px;
+    text-align: center;
+}
+main p {
+    display: inline-block;
+}
+
+.commandButton {
+    width: 150px;
+    border-radius: 8px;
+    margin: 20px;
+    text-align: center;
+    line-height: 30px;
+    background-color: #dd1d5e;
+    font-size: smaller;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+
