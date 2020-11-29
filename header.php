@@ -13,7 +13,7 @@
         if (isset($_POST['search'])) {
             $searchedBook = "%{$_POST['search']}%";
 
-            $db = new mysqli('localhost', 'root', 'Dmdenl1004!', 'delicious_book');
+            $db = new mysqli('localhost', 'root', '', 'delicious_book');
             $query = "SELECT * FROM book WHERE LOWER(title) LIKE ?";
             $statement = $db->prepare($query);
             $statement->bind_param('s', $searchedBook);
@@ -28,7 +28,7 @@
         <div class="dropdown">
             <?php
             if (basename($_SERVER['PHP_SELF']) == "index.php") {
-                $db = new mysqli('localhost', 'root', 'Dmdenl1004!', 'delicious_book');
+                $db = new mysqli('localhost', 'root', '', 'delicious_book');
                 $query = "SELECT categoryId, categoryName FROM category";
                 $statement = $db->prepare($query);
                 $statement->execute();
