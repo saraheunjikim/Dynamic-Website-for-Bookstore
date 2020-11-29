@@ -24,7 +24,7 @@
             }
         }
         if ($found === 0) {
-            $db = new mysqli('localhost', 'root', 'Dmdenl1004!', 'delicious_book');
+            $db = new mysqli('localhost', 'root', '', 'delicious_book');
             $query = "SELECT bookId, title, price FROM book WHERE bookId = ?";
             $statement = $db->prepare($query);
             $statement->bind_param('s', $bookId);
