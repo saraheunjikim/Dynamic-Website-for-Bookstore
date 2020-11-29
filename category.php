@@ -42,7 +42,7 @@
 
             <div class="booksContainer">
                 <?php
-               $db = new mysqli('localhost', 'root', 'Dmdenl1004!', 'delicious_book');
+               $db = new mysqli('localhost', 'root', '', 'delicious_book');
                $query = "SELECT bookId, title, author, price, image, readNow FROM book WHERE categoryId = ?";
                $statement = $db->prepare($query);
                $statement->bind_param('s', $selectedCategory);
