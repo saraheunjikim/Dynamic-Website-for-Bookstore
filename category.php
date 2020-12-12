@@ -42,32 +42,31 @@
 
             <div class="booksContainer">
                 <?php
-               $db = new mysqli('localhost', 'root', '', 'delicious_book');
-               $query = "SELECT bookId, title, author, price, image, readNow FROM book WHERE categoryId = ?";
-               $statement = $db->prepare($query);
-               $statement->bind_param('s', $selectedCategory);
-               $statement->execute();
-               $result = $statement->get_result();
+                $db = getDbConnection();
+                $query = "SELECT bookId, title, author, price, image, readNow FROM book WHERE categoryId = ?";
+                $statement = $db->prepare($query);
+                $statement->bind_param('s', $selectedCategory);
+                $statement->execute();
+                $result = $statement->get_result();
 
-               while ($book = $result->fetch_assoc()) {
-                        echo "<div class=\"bookItem\">
+                while ($book = $result->fetch_assoc()) {
+                    echo "<div class=\"bookItem\">
                                   <img src=\"images/books/$book[image]\" alt=\"$book[image]\" class=\"image\">
                                   <ul>
                                       <li class=\"title\"> $book[title] </li>
                                       <li class=\"author\"> $book[author] </li>
-                                      <li class=\"price\"> $$book[price] </li>
-                                  </ul>
-                                  <div class=\"buttons\">
+                                      <li class=\"price\"> $$book[price] </li>  
                                       <a href=\"cart.php?bookId=$book[bookId]\"> <button class=\"button buttonCart\">Add to Cart</button> </a>";
-                        if ($book['readNow'] == 0) {
-                            echo "</div> </div>";
-                        } else {
-                            echo "<a href=\"#\"> <button class=\"button buttonOnline\">Read Now</button> </a>
-                                  </div> </div>";
-                        }
+                    if ($book['readNow'] == 0) {
+                        echo "</div> </ul>";
+                    } else {
+                        echo "<a href=\"#\"> <button class=\"button buttonOnline\">Read Now</button> </a>
+                             </div> </ul>";
+                    }
                 }
                 ?>
             </div>
+        </div>
     </section>
     <?php
     include('footer.php');

@@ -1,0 +1,58 @@
+.errorMessage {
+    color: #dd1d5e;
+    font-weight: bold;
+}
+#topSection {
+    max-width: 1400px;
+    padding: 30px 190px 30px 140px;
+}
+#bottomSection {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1400px;
+    padding-left: 70px;
+}
+#formTitleText {
+    max-width: 465px;
+}
+#bookForm {
+    margin: 20px 0 50px 0;
+    background-color: #fff9fc;
+    padding: 30px;
+}
+#bookTable td {
+    vertical-align: top;
+    text-align: left;
+    margin: 15px;
+}
+#bookTable th {
+    text-align: left;
+    padding: 3px;
+    font-weight: lighter;
+}
+.inputField {
+    width: 250px;
+}
+td select {
+    font-size: smaller;
+    height: 23px;
+}
+#submitButton {
+    height: 25px;
+    border-radius: 8px;
+    border: none;
+    margin: 6px 0 0 4px;
+    text-align: center;
+    background-color: #dd1d5e;
+    color: white;
+    font-size: 0.875em;
+    text-decoration: none;
+}
+#submitButton:hover {
+    cursor: pointer;
+}
+#information {
+    margin: 55px 0;
+    background-color: #fff9fc;
+    padding: 10px;
+}

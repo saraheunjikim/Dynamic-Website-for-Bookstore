@@ -61,7 +61,6 @@ ul {
     text-align: left;
     margin-left: 5px;
 }
-
 li.title {
     list-style-type: none;
     font-size: 16px;
@@ -79,34 +78,27 @@ li.price {
     font-size: 13px;
     font-weight: bold;
 }
-
-.buttons {
-    position: absolute;
-    margin-left: 0;
-    left: 130px;
-    right: 100px;
-    top: 150px;
+a:link{
+    text-decoration: none !important;
 }
-
 button {
+    margin-top: 8px;
     color: white;
     padding: 2px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
+    display: block;
     font-size: 12px;
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 30px;
 }
-
 .buttonCart, .buttonOnline {
     width: 100px;
     background-color: white;
     color: black;
     border: 2px solid #dd1d5e;
 }
-
 .buttonCart:hover, .buttonOnline:hover {
     background-color: #dd1d5e;
     color: white;

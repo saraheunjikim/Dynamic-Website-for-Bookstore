@@ -75,7 +75,7 @@ if ((!$_SESSION['cartCount']) || ($_SESSION['cartCount'] == 0)) {
             }
             ?>
             <form id="checkoutForm" method="post" action="checkout.php">
-                <div id="checkoutTable">
+                <div id="bookTable">
                     <table>
                         <h3>Customer Information</h3>
                         <tr>

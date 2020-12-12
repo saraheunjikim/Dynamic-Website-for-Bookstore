@@ -22,17 +22,17 @@
     color: red;
     line-height: 5px;
 }
-#checkoutForm {
+#bookForm {
     margin: 20px 0 50px 0;
     background-color: #fff9fc;
     padding: 30px;
 }
-#checkoutTable td {
+#bookTable td {
     vertical-align: top;
     text-align: left;
     margin: 15px;
 }
-#checkoutTable th {
+#bookTable th {
     text-align: left;
     padding: 3px;
     font-weight: lighter;

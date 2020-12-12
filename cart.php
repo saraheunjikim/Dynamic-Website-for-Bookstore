@@ -24,7 +24,7 @@
             }
         }
         if ($found === 0) {
-            $db = new mysqli('localhost', 'root', '', 'delicious_book');
+            $db = new mysqli('localhost', 'root', 'Dmdenl1004!', 'delicious_book');
             $query = "SELECT bookId, title, price FROM book WHERE bookId = ?";
             $statement = $db->prepare($query);
             $statement->bind_param('s', $bookId);
@@ -144,7 +144,11 @@
         } elseif ($_SESSION['cartCount'] == 0) {
             echo " ";
         } else {
-            echo "<h2>You have " . $_SESSION['cartCount'] . " item in the cart</h2>";
+            if ($_SESSION['cartCount'] > 1 ) {
+                echo "<h2>You have " . $_SESSION['cartCount'] . " items in the cart</h2>";
+            } else {
+                echo "<h2>You have " . $_SESSION['cartCount'] . " item in the cart</h2>";
+            }
             echo "<h2>Cart Total: $" . $totalPrice . "</h2>";
         }
         ?>

@@ -6,14 +6,18 @@
     </div>
     <div id="midHeader">
         <form id="searchBoxForm" action="searched.php" method="post">
-            <input id="searchBox" type="text" name="search">
+            <input id="searchBox" type="text" name="search" placeholder="Search">
             <input id="searchIcon" type="image" src="images/logos/search_icon.png" alt="search icon">
         </form>
         <?php
+        function getDbConnection(): mysqli
+        {
+            return new mysqli('127.0.0.1', 'root', 'password', 'delicious_book');
+        }
         if (isset($_POST['search'])) {
             $searchedBook = "%{$_POST['search']}%";
 
-            $db = new mysqli('localhost', 'root', '', 'delicious_book');
+            $db = getDbConnection();
             $query = "SELECT * FROM book WHERE LOWER(title) LIKE ?";
             $statement = $db->prepare($query);
             $statement->bind_param('s', $searchedBook);
@@ -28,7 +32,7 @@
         <div class="dropdown">
             <?php
             if (basename($_SERVER['PHP_SELF']) == "index.php") {
-                $db = new mysqli('localhost', 'root', '', 'delicious_book');
+                $db = getDbConnection();
                 $query = "SELECT categoryId, categoryName FROM category";
                 $statement = $db->prepare($query);
                 $statement->execute();
@@ -62,7 +66,7 @@
                 <img src="images/logos/shopping_cart_icon.png" alt="shopping cart icon">
             </a>
         </div>
-        <div id=\"cartCount\"> <?php echo $_SESSION['cartCount'] ?> items</div>
-        <div id="loginButton"><a href="#">login</a></div>
+        <div id="cartCount"> <?php echo $_SESSION['cartCount'] ?> items</div>
+        <div id="loginButton"><a href="adminLogin.php">login</a></div>
     </div>
 </header>
