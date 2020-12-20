@@ -2,7 +2,7 @@
   <a href="https://github.com/saraheunjikim/Dynamic-Website-for-Bookstore">
     <img src="bookstore.JPG" alt="Logo" width="300">
   </a>
-  <h3 align="center">Delicious Book Store</h3>
+  <h1 align="center">Delicious Book Store</h1>
   <p align="center">
     This is a dynamic website for a book store with MySQL and PHP.
 </p>
